@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 09</title>
+</head>
+<style>
+    body {
+        background-color: rgb(70, 70, 255);
+        color: white;
+    }
+    input {
+        padding: 20px;
+    }
+    #box {
+        text-align: center;
+        margin-top: 30vh; 
+    }
+    #res {
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <div id="box">
+        <h1>Reajuste Salarial</h1>
+        <input type="button" value="Reajustar Salário" onclick="reajustar()">
+    </div>
+    <div id="res">
+        Clique no botão acima para iniciar
+    </div>
+    
+<script>
+    var res = document.querySelector('#res')
+    function reajustar() {
+        var nome = prompt('Qual é o nome do funcionário?')
+        var salarioAtual = prompt(`Qual é o salário atual de ${nome}?`)
+        var porcentagem = prompt(`Em qual porcentagem o salário de ${nome} será reajustado?`)
+
+        salarioAtual = Number(salarioAtual)
+        porcentagem = Number(porcentagem)
+
+        var aumento = porcentagem * salarioAtual / 100
+        var salarioNovo = salarioAtual + Number(aumento)
+
+        res.innerHTML = `<h1>${nome} recebeu um aumento salarial!!!</h1>`
+        res.innerHTML += `<p>O salário era de R$ ${salarioAtual}.</p>`
+        res.innerHTML += `<p>Com um aumento de ${porcentagem}%, o salário vai aumentar R$ ${aumento} no próximo mês.</p>`
+        res.innerHTML += `<p>E a partir daí, ${nome} vai passar a ganhar R$ ${salarioNovo}.</p>`
+    
+    }
+ 
+</script>
+</body>
+</html>

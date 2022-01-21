@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 03</title>
+    <style>
+        body {
+            background-color: rgb(70, 70, 255);
+            color: white;
+        }
+        input {
+            padding: 20px;
+        }
+        #box {
+            text-align: center;
+            margin-top: 30vh; 
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Antes de Depois</h1>
+        <input type="button" value="Antecessor e Sucessor" id="bt1" onclick="mostrar()">
+
+    </div>
+
+
+    <script>
+        var botao = document.querySelector('#bt1')
+
+        function mostrar() {
+            var numero = prompt('Digite um número inteiro qualquer')
+            var antecessor = Number(numero) -1
+            var sucessor = Number(numero) +1
+    
+
+            alert(`Antes de ${numero} temos o número ${antecessor}.\nDepois de ${numero} temos o número ${sucessor}`)
+        }
+
+    </script>
+    
+</body>
+</html>

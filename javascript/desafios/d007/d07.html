@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 07</title>
+</head>
+<style>
+    body {
+        background-color: rgb(70, 70, 255);
+        color: white;
+    }
+    input {
+        padding: 20px;
+    }
+    #box {
+        text-align: center;
+        margin-top: 30vh; 
+    }
+    #res {
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <div id="box">
+        <h1>Conversor R$  &rarr; US$</h1>
+        <input type="button" value="Converter" onclick="converter()">
+    </div>
+    <div id="res">
+        Clique no botão acima para iniciar
+    </div>
+    
+<script>
+    var dolar = prompt('Quanto está a cotação do dolar hoje?')
+    dolar = Number(dolar)
+
+    function converter() {
+        var real = prompt('Quantos R$ você quer converter?')
+        var conv = Number(real) * dolar
+
+        var res = document.getElementById('res')
+        res.innerHTML = `R$ ${real} corresponde à $ ${conv}`
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 05</title>
+</head>
+<style>
+    body {
+        background-color: rgb(70, 70, 255);
+        color: white;
+    }
+    input {
+        padding: 20px;
+    }
+    #box {
+        text-align: center;
+        margin-top: 30vh; 
+    }
+    #res {
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <div id="box">
+        <h1>Conversor de Medidas</h1>
+        <input type="button" value="Converter" onclick="converter()">
+    </div>
+    <div id="res">
+        Clique no botão acima para iniciar
+    </div>
+    
+
+    <script>
+        function converter() {
+            var metro = prompt('Digite uma distância em metros')
+            metro = Number(metro)
+            var kilometro = metro / 1000
+            var hectometro = metro / 100
+            var decametro = metro / 10
+            var decimetro = metro * 10
+            var centimetro = metro * 100
+            var milimetro = metro * 1000
+
+
+            var res = document.getElementById('res')
+            res.innerHTML = `<h1>A distância de ${metro} metros, corresponde à:</h1>`
+            res.innerHTML += `<p>${kilometro} quilômetros (km)</p>`
+            res.innerHTML += `<p>${hectometro} hectômetros(Hm) </p>`
+            res.innerHTML += `<p>${decametro} decâmetros (Dam) </p>`
+            res.innerHTML += `<p>${decimetro} decímetros (Dm) </p>`
+            res.innerHTML += `<p>${centimetro} centímetros (Cm) </p>`
+            res.innerHTML += `<p>${milimetro} milímetros (mm) </p>`
+
+        }
+    </script>
+</body>
+</html>

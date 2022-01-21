@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02</title>
+    <style>
+        body {
+            background-color: rgb(70, 70, 255);
+            color: white;
+        }
+        input {
+            padding: 20px;
+        }
+        #box {
+            text-align: center;
+            margin-top: 30vh; 
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Boas Vindas!</h1>
+        <input type="button" value="Inicie o Desafio" id="bt1" onclick="clicar()">
+    </div>
+   
+    
+    <script>
+        var botao = document.querySelector('#bt1')
+
+        function clicar() {
+            var nome = prompt('Qual é seu nome?')
+            var idade = prompt('Qual é sua idade?')
+            alert(`Olá, ${nome} de ${idade} anos!`)
+        }
+       
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+*{
+    color: white;
+}
+
+body{
+    background-color: rgb(46, 43, 43);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+iframe{
+    margin-bottom: 20px;
+}

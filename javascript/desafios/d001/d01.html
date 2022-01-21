@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 01</title>
+    <style>
+        body {
+            background-color: rgb(70, 70, 255);
+            color: white;
+        }
+        input {
+            padding: 20px;
+        }
+        #box {
+            text-align: center;
+            margin-top: 30vh; 
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Desafio das Mensagens</h1>
+        <input type="button" value="Botão 1" id="bt1" onclick="clicar1()">
+        <input type="button" value="Botão 2" id="bt2" onclick="clicar2()">
+        <input type="button" value="Botão 3" id="bt3" onclick="clicar3()">
+    </div>
+    
+    <script>
+        var botao1 = document.querySelector('#bt1')
+        var botao2 = document.querySelector('#bt2')
+        var botao3 = document.querySelector('#bt3')
+
+        function clicar1() {
+            alert('Você clicou no 1º botão')
+        }
+        function clicar2() {
+            alert('Você clicou no 2º botão')
+        }
+        function clicar3() {
+            alert('Você clicou no 3º botão')
+        }
+
+    </script>
+</body>
+</html>

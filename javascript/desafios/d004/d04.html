@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04</title>
+    <style>
+        body {
+            background-color: rgb(70, 70, 255);
+            color: white;
+        }
+        input {
+            padding: 20px;
+        }
+        #box {
+            text-align: center;
+            margin-top: 30vh; 
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Calculando o troco</h1>
+        <input type="button" value="Comprar Produto" onclick="calcular()">
+
+    </div>
+
+    <script>
+
+        function calcular() {
+            var produto = prompt('Que produto você está comprando?')
+            var preco = prompt('Quanto custa esse produto?')
+            var dinheiro = prompt('Qual foi o valor que você deu para pagar?')
+            preco = Number(preco)
+            dinheiro = Number(dinheiro)
+            var troco = dinheiro - preco
+
+
+            preco = preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            dinheiro = dinheiro.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            troco = troco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+            
+            alert(`Você comprou um(a) ${produto} por ${preco}.\nDeu ${dinheiro} em dinheiro e vai receber ${troco} de troco.\nVolte sempre!`)
+        }
+
+
+    </script>
+    
+</body>
+</html>
