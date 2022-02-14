@@ -1,2 +1,1 @@
-# curso-em-video
- www.cursoemvideo.com
+# www.cursoemvideo.com
